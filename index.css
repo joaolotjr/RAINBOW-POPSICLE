@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+.popsicle {
+  position: relative;
+  width: 15rem;
+  height: 23rem;
+
+  border: 0.3rem solid black;
+
+  border-top-left-radius: 7.5rem;
+  border-top-right-radius: 7.5rem;
+
+  background: repeating-linear-gradient(
+    315deg,
+    rgba(255, 252, 84, 1) 0%,
+    rgba(255, 252, 84, 1) 10%,
+    rgba(116, 101, 230, 1) 10%,
+    rgba(116, 101, 230, 1) 20%,
+    rgba(239, 137, 239, 1) 20%,
+    rgba(239, 137, 239, 1) 30%,
+    rgba(138, 250, 77, 1) 30%,
+    rgba(138, 250, 77, 1) 40%,
+    rgba(116, 251, 253, 1) 40%,
+    rgba(116, 251, 253, 1) 50%
+  );
+  background-size: 200% 200%;
+  animation: Popsicle-animation 5s linear infinite forwards;
+}
+
+@keyframes Popsicle-animation {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+.stick {
+  position: absolute;
+  bottom: -8rem;
+  left: 50%;
+  margin-left: -2rem;
+  width: 4rem;
+  height: 8rem;
+  border: 0.3rem solid black;
+
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background: #e6c761;
+}
